@@ -1,0 +1,13 @@
+I am a function and I'm searching for a letter on a board.
+
+What do I need to know? The letter that I am searching for and which cells in the grid to look.
+
+What do I need to submit? The letter and the position on the board that I found the letter
+
+I am evaluating the info submitted to me and deciding if I should send send in additional resources.
+
+What do I need to know? How much of the word has already been found and what coordinates make up the path?
+
+what do I need to tell my workers and the nightshift manager? We are looking for this letter at one of these posiions. If you find it, report back to me with the letter and the position and I'll have my day crew look for the next letter
+
+keep a hash map of all

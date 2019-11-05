@@ -1,0 +1,71 @@
+//for each possible die 1 roll
+     //for each possible die 2 roll
+       //for each possible die 3 roll
+    
+    //explore first die being 1. Then forget that and explore first die being 2
+    
+    //backtracking: Finding solution(s) by trying partial solutions and abandoning them if they are not suitable.
+    
+   //Explore(decisions)
+    //  - if there are no more deisions to make: stop
+    //  - else, let's handle one decision ourselves, and the rest by recursion
+    //      Choose C
+    //      Explore the remaining choice for C for this decision
+    //      Un-Choose C (backtrack)
+
+void diceHelper(int, int, int, Vector<int>&);
+void diceRolls(int, int);
+
+
+int counter = 0;
+
+int main() {
+
+diceRolls(2, 2);
+
+        return 0;
+}
+
+void diceHelper(int dice, int desiredSum, int sumSoFar, Vector<int>& chosen) {
+   // cout << "diceHelper(" << dice << ", " << chosen << ")" << endl;
+
+    if (dice == 0) {//base case
+
+cout <<  chosen << endl;
+
+    } else {
+        //some dice left to roll
+        //handle one die
+        //for each die value in range
+        //Choose: current die that will have value i
+
+        for (int i = 1; i <= 6; i++) {
+
+            if (sumSoFar + i + 1*(dice-1) <= desiredSum &&
+                sumSoFar + i + 6*(dice-1) >= desiredSum   ) {
+
+        chosen.add(i);
+
+        //Explore: diceRolls (dice -1)
+        diceHelper(dice - 1, desiredSum, sumSoFar + i, chosen);
+      //  cout << "after explore: " << chosen << endl;
+        //Unchoose: value i
+        chosen.remove((chosen.size() - 1));
+      //  cout << "after unchoose: " << chosen << endl;
+
+        //how do we keep track of our choices?
+
+            }
+        }
+    }
+
+
+}
+
+void diceRolls(int dice, int desiredSum) {
+
+    Vector<int> chosen;
+
+    diceHelper(dice, desiredSum, 0, chosen);
+
+}

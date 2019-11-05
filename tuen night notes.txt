@@ -1,0 +1,20 @@
+  currentCube = Boggle::getLetter(rowx, coly);
+                        Point thisPoint(rowx, coly);
+
+                        //Kevin: If the recursive call returns false, it doesn't necessarily mean
+                        //that the word cannot be found. What it means is that the word cannot be found
+                        //down that particular path so you should keep checking other paths
+
+                        if (currentCube == word[positionToSearch] && !visitedCubes.contains(thisPoint)) {//as soon as it finds the right letter it stops.
+                            //I want it to find all letters and explore all paths
+                            foundSoFar += currentCube;
+                            visitedCubes.add(thisPoint);
+                            if (humanWordSearchHelper(word, foundSoFar, rowx, coly, visitedCubes)) {
+                                    return true;
+                        } else {
+                             return humanWordSearchHelper(word, foundSoFar, rowx, coly, visitedCubes);
+                            }
+                                    //start exploring
+                        //we need to backtrack here?
+
+                    }

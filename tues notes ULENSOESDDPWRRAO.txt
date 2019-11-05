@@ -1,0 +1,27 @@
+Type a word (or Enter to stop) SODA
+humanWordSearchHelper(string word SODA , string foundSoFar:  x: 0 y: 0)
+humanWordSearchHelper(string word SODA , string foundSoFar: S x: 1 y: 0)
+humanWordSearchHelper(string word SODA , string foundSoFar: SO x: 1 y: 1)
+humanWordSearchHelper(string word SODA , string foundSoFar: SOD x: 2 y: 0)
+You must enter an unfound 4+ letter word from the dictionary.
+ULEN
+SOES
+DDPW
+
+
+
+ULENSOESDDPWRRAO.txt
+
+
+AOCF
+OURL
+DNEE
+TLHH
+
+Your words: (1): {"FLEE"}
+Type a word (or Enter to stop) 
+computerWordSearch
+{"COCOA", "COCOON", "CORER", "CORNEL", "CORNER", "CORNU", "COUNT", "CREEL", "CRENEL", "CROON", "CRORE", "CRUEL", "CRUOR", "CURER", "CURLER", "DONEE", "DOURER", "DUELER", "DUROC", "ENDUE", "ENDURE", "ENDURO", "ENURE", "FLEER", "FREER", "FRERE", "FRORE", "HEELER", "NONHERO", "ODOUR", "REELER", "REHEEL", "RELEND", "RELENT", "RERUN", "ROCOCO", "ROUEN", "ROUND", "RUNDLE", "RUNROUND", "UNDONE", "UNDUE", "UNREEL", "UNRENT", "UNROUND"}
+Play again (Y/N)? 
+
+CENIHHRYUNEJNTAE

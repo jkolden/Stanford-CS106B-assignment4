@@ -1,0 +1,64 @@
+printBinary(3, )
+printBinary(2, 0)
+printBinary(1, 00)
+printBinary(0, 000)
+000
+printBinary(0, 001)
+001
+printBinary(1, 01)
+printBinary(0, 010)
+010
+printBinary(0, 011)
+011
+printBinary(2, 1)
+printBinary(1, 10)
+printBinary(0, 100)
+100
+printBinary(0, 101)
+101
+printBinary(1, 11)
+printBinary(0, 110)
+110
+printBinary(0, 111)
+111
+
+
+//prints every binary number that has exactly the given number of digits
+void printBinary(int digits, string prefix) {
+//cout << "printBinary(" << digits << ", " << prefix << ")" << endl;
+    if (digits == 0)
+     {
+        cout << prefix << endl; //base case
+
+
+    } else {//recursive case
+        printBinary(digits - 1, prefix + "0");
+        printBinary(digits - 1, prefix + "1");
+    }
+
+}
+
+void printDecimal(int digits, string prefix) {
+
+    if (digits == 0)
+     {
+        cout << prefix << endl; //base case
+
+
+    } else {//recursive case
+        for (int i = 0; i <= 9; i++) {
+        printDecimal(digits - 1, prefix + integerToString(i));
+}
+        }
+}
+
+
+//   printBinary(3, ")
+//   printBinary(2, "0")
+//     printBinary(1, "00")
+//     printBinary(1, "01")
+//      printBinary(0, "000")
+//   printBinary(2, "1")
+//    cout << "counter: " << counter++ << " void printBinary(int " << digits << ") " << endl;
+
+
